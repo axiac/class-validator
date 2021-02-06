@@ -6,7 +6,7 @@ export const IS_INSTANCE = 'isInstance';
 /**
  * Checks if the value is an instance of the specified object.
  */
-export function isInstance(object: unknown, targetTypeConstructor: new (...args: any[]) => any): boolean {
+export function isInstance(object: unknown, targetTypeConstructor: abstract new (...args: any[]) => any): boolean {
   return (
     targetTypeConstructor && typeof targetTypeConstructor === 'function' && object instanceof targetTypeConstructor
   );
